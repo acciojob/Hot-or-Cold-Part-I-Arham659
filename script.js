@@ -1,5 +1,3 @@
-//your code here
-
 var input=parseInt(document.getElementById("guess").value);
  var numP=document.getElementById("num");
 var res=document.getElementById("respond");
