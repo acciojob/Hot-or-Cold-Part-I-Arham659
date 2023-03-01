@@ -1,21 +1,21 @@
-//your code here
-var randomNum;
-var input;
-function randomNumGenerator(){
-	randomNum = Math.floor(Math.random()*41) - 20;
-	document.getElementById("num").innerHTML = randomNum;
-	guessName();
-	print();
-}
-function guessName() {
-	input = parseInt(document.getElementById("guess").value);	
-}
-function print(){
+
+var input=parseInt(document.getElementById("guess").value);
+ var numP=document.getElementById("num");
+var res=document.getElementById("respond");
+function randomNumGen(){
+	 //generate random number
+var	randomNum = Math.floor(Math.random()*41) - 20;
+	 //show random number
+	numP.innerText = randomNum;
+	
+  //check differnce and print
 	if(Math.abs(randomNum - input) <= 5){
-		document.getElementById("respond").innerHTML = "Hot";
+		res.innerText = "Hot";
 	}
 	else{
-		document.getElementById("respond").innerHTML = "Cold";
+		res.innerText = "Cold";
 	}
 }
 
+
+	
