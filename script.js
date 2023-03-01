@@ -1,21 +1,21 @@
+//your code here
+let min = -20;
+let max = 20;
 
-var input=parseInt(document.getElementById("guess").value);
- var numP=document.getElementById("num");
-var res=document.getElementById("respond");
-function randomNumGen(){
-	 //generate random number
-var	randomNum = Math.floor(Math.random()*41) - 20;
-	 //show random number
-	numP.innerText = randomNum;
-	
-  //check differnce and print
-	if(Math.abs(randomNum - input) <= 5){
-		res.innerText = "Hot";
-	}
-	else{
-		res.innerText = "Cold";
-	}
+// console.log("hello World")
+let number = document.getElementById("guess");
+let text = document.getElementById("num");
+
+function result(){
+    let randomNumber = Math.floor(Math.random()*(max-min+1)+min);
+    console.log(number.value);
+    console.log(randomNumber);
+    text.textContent = randomNumber;
+
+    if(randomNumber > (number.value - 5) && randomNumber < (number.value + 5)) {
+        text.textContent = "Hot";
+    } else {
+        text.textContent = "Cold";
+    }
+    
 }
-
-
-	
